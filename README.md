@@ -1,15 +1,59 @@
-## Nome do Projeto
-- Classic Cars - Anúncios para vendas de Carros Antigos
+## 🚗 Classic Cars — Plataforma de Anúncios de Carros Antigos
 
-## Alunos
-- Gabriel Santos Palermo
-- Alisson Klem
+Aplicação web desenvolvida para publicação e visualização de anúncios de carros clássicos, com foco em uma interface moderna, responsiva e intuitiva.
 
-## Protótipo de Alta Fidelidade - Figma
-- [Figma](https://www.figma.com/design/vsJXjxCLbSegDUO5xikCH8/Projeto-D.-Full-Stack?node-id=0-1&t=IEGOBK5DmvrIGoR8-1)
+---
 
-## D1: Kickoff <img src="https://cdn.jsdelivr.net" height="40" width="40" />
-- Definição do tema, Protótipo de Alta Fidelidade (Figma/Penpot) e Setup do Next.js com Tailwind e TypeScript.
+## 👨‍🎓 Integrantes
+- Gabriel Santos Palermo  
+- Alisson Klem  
 
-## D2: The Shell
-- Implementação das rotas principais, Layouts persistentes, Componentização Atômica e Navegação funcional.
+---
+
+## 🎨 Protótipo de Alta Fidelidade
+Acesse o protótipo no Figma:  
+👉 https://www.figma.com/design/vsJXjxCLbSegDUO5xikCH8/Projeto-D.-Full-Stack?node-id=0-1&t=IEGOBK5DmvrIGoR8-1
+
+---
+
+## 🚀 Tecnologias Utilizadas
+- Next.js  
+- TypeScript  
+- Tailwind CSS  
+
+---
+
+## 📌 Etapas do Projeto
+
+### 🟢 D1: Kickoff
+- Definição do tema  
+- Criação do protótipo de alta fidelidade (Figma)  
+- Setup inicial do projeto com Next.js, Tailwind e TypeScript  
+
+---
+
+### 🟡 D2: The Shell
+- Implementação das rotas principais  
+- Criação de layouts persistentes  
+- Componentização baseada em Atomic Design  
+- Navegação funcional entre páginas  
+
+## 🔐 Autenticação e Permissões
+
+A aplicação possui diferentes níveis de acesso, conforme o tipo de usuário:
+
+- **Visitantes (não autenticados):**  
+  Podem visualizar os veículos anunciados e acessar informações de contato.
+
+- **Usuários autenticados:**  
+  Após realizar login ou cadastro, passam a ter acesso completo às funcionalidades da plataforma, incluindo:  
+  - Publicação de anúncios  
+  - Visualização detalhada dos veículos  
+  - Gerenciamento dos próprios anúncios  
+  - Acesso a insights relacionados às suas publicações  
+
+- **Administrador:**  
+  Possui credenciais previamente definidas e acesso a funcionalidades avançadas de gestão, como:  
+  - Aprovação ou rejeição de anúncios pendentes  
+  - Monitoramento dos anúncios publicados  
+  - Controle geral da plataforma  
