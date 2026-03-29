@@ -19,7 +19,6 @@ export default function Insights() {
 
     const anuncios = JSON.parse(localStorage.getItem("anuncios") || "[]");
 
-    // 🔥 filtrar anúncios do usuário (igual MeusAnuncios)
     const meus = anuncios.filter((a: any) => a.usuario === usuario);
 
     const totalAnuncios = meus.length;
@@ -32,7 +31,6 @@ export default function Insights() {
     const mediaLikes =
       totalAnuncios > 0 ? Math.floor(totalLikes / totalAnuncios) : 0;
 
-    // 🔥 critério simples (pode ajustar depois)
     const positivos = meus.filter((a: any) => (a.likes || 0) >= 5).length;
     const negativos = meus.filter((a: any) => (a.likes || 0) < 5).length;
 

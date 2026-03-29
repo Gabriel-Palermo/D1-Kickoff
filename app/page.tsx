@@ -12,12 +12,10 @@ export default function Home() {
   useEffect(() => {
     const anuncios = JSON.parse(localStorage.getItem("anuncios") || "[]");
 
-    // 🔥 FILTRAR APENAS APROVADOS
     const aprovados = anuncios.filter((a: any) => a.status === "aprovado");
 
-    // 🔥 formata os dados
     const formatados = aprovados.map((a: any) => ({
-      ...a, // 🔥 mantém TODOS os dados
+      ...a, // Mantém TODOS os dados
       nome: a.modelo || "Sem nome",
       imagem: a.imagens?.[0] || "/images/sem-imagem.png",
       likes: a.likes || 0

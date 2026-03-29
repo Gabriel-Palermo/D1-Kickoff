@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 export default function Anunciar() {
   const router = useRouter();
 
-  // pessoais
+  // Pessoais
   const [nome, setNome] = useState("");
   const [cpf, setCpf] = useState("");
   const [telefone, setTelefone] = useState("");
@@ -18,7 +18,7 @@ export default function Anunciar() {
   const [info, setInfo] = useState("");
   const [complemento, setComplemento] = useState("");
 
-  // veículo
+  // Veículo
   const [modelo, setModelo] = useState("");
   const [marca, setMarca] = useState("");
   const [ano, setAno] = useState("");
@@ -35,7 +35,7 @@ export default function Anunciar() {
   const [ipva, setIpva] = useState("");
   const [imagens, setImagens] = useState<string[]>([]);
 
-  // valores
+  // Valores
   const [avista, setAvista] = useState("");
   const [aprazo, setAprazo] = useState("");
   const [outros, setOutros] = useState("");
@@ -89,7 +89,7 @@ export default function Anunciar() {
       avista, aprazo, parcelas, outros,
       usuario,
       
-      dataCriacao: new Date().toISOString(), // 🔥 salva data real
+      dataCriacao: new Date().toISOString(),
       status: "pendente",
       like: 0
     };

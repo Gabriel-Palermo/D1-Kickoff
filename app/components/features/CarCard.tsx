@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 type Props = {
   carro: any;
-  index: number; // 🔥 necessário para salvar o like
+  index: number;
 };
 
 export const CarCard = ({ carro, index }: Props) => {
@@ -14,7 +14,7 @@ export const CarCard = ({ carro, index }: Props) => {
   const [likes, setLikes] = useState(0);
   const [curtido, setCurtido] = useState(false);
 
-  // 🔥 carregar likes salvos
+  // Carregar likes salvos
   useEffect(() => {
     const anuncios = JSON.parse(localStorage.getItem("anuncios") || "[]");
 
@@ -22,7 +22,7 @@ export const CarCard = ({ carro, index }: Props) => {
       setLikes(anuncios[index].likes);
     }
 
-    // 🔥 NOVO - recuperar curtida
+    // NOVO - recuperar curtida
     if (anuncios[index]?.curtido) {
       setCurtido(true);
     }
@@ -43,7 +43,7 @@ export const CarCard = ({ carro, index }: Props) => {
 
     if (anuncios[index]) {
       anuncios[index].likes = novosLikes;
-      anuncios[index].curtido = novoCurtido; // 🔥 NOVO
+      anuncios[index].curtido = novoCurtido;
       localStorage.setItem("anuncios", JSON.stringify(anuncios));
     }
   };
@@ -52,7 +52,7 @@ export const CarCard = ({ carro, index }: Props) => {
     <div className="bg-white rounded-xl shadow-md p-3 w-64">
       
       <Image
-        src={carro.imagem || "/images/default.jpg"} // 🔥 evita erro
+        src={carro.imagem || "/images/default.jpg"}
         alt={carro.nome}
         width={300}
         height={200}

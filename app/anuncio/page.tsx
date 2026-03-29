@@ -43,7 +43,6 @@ export default function AnuncioDetalhe() {
 
   }, [searchParams]);
 
-  // evita render antes da verificação
   if (!tipo || !anuncio) return null;
   if (!anuncio) return null;
 

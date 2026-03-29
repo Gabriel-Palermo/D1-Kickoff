@@ -20,14 +20,13 @@ export default function Login() {
       return;
     }
 
-    // 👑 ADMIN (PRIORIDADE TOTAL)
+    // ADMIN
     if (usuario === "admin" && senha === "1234") {
       localStorage.setItem("tipo", "admin");
       localStorage.setItem("usuario", "Administrador");
 
       router.push("/admin");
 
-      // 🔥 mantém reload
       setTimeout(() => {
         window.location.reload();
       }, 100);
@@ -35,7 +34,6 @@ export default function Login() {
       return;
     }
 
-    // 🔥 USUÁRIOS
     const usuarios = JSON.parse(localStorage.getItem("usuarios") || "[]");
 
     const userEncontrado = usuarios.find(
@@ -47,7 +45,6 @@ export default function Login() {
       return;
     }
 
-    // 👤 LOGIN OK
     localStorage.setItem("tipo", "user");
     localStorage.setItem("usuario", userEncontrado.nome);
 

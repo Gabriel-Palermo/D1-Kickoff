@@ -47,7 +47,6 @@ export default function Pedidos() {
       localStorage.setItem("anuncios", JSON.stringify(anuncios));
     }
 
-    // remove da tela
     setPedidos((prev) => prev.filter((_, i) => i !== index));
   };
 
